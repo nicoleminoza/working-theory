@@ -1,92 +1,70 @@
 # Working Theory
 
-Working Theory is an interactive editorial web application built around real decisions from Nicole Miñoza’s work across Product Marketing and Product.
+*A point of view strong enough to act on, and open enough to change when the evidence does.*
 
-It reconstructs each problem around:
+Working Theory is an editorial web app built around real decisions from my work
+across Product and Product Marketing at Adobe. Each problem is reconstructed
+around what I believed, what the evidence complicated, what I changed, and what
+I carried forward.
 
-- what she believed
-- what the evidence complicated
-- what changed
-- what she carried forward
+The unit is the judgment, not the project.
 
-The central idea is:
+**Live:** https://nicoleminoza.com/working-theory/
 
-> **A point of view strong enough to act on, and open enough to change when the evidence does.**
-
-## Current cases
+## The cases
 
 ### Problem 01 · Adobe · 2020–2024
-
 **The company needed one platform. Every team had a reason to say no.**
 
-A platform-strategy case about getting a shared text engine adopted across product teams and turning migration into cross-product governance.
+A platform-strategy case about getting a shared text engine adopted across
+product teams I didn't run, and turning migration into cross-product governance.
 
 ### Problem 02 · Adobe · 2019–2022
-
 **The product was growing. The economics were breaking.**
 
-A business-model case about moving partner royalties from activation to usage and making the transition work across Product, partners, and customers.
+A business-model case about moving partner royalties from activation to usage,
+and making the transition work across product, partners, and customers.
 
 ### Problem 03 · Adobe · 2018
-
 **The product was no longer something customers bought.**
 
-A positioning and go-to-market case about Typekit becoming Adobe Fonts and the shift from standalone purchase to Creative Cloud membership value.
+A positioning and go-to-market case about Typekit becoming Adobe Fonts, and the
+shift from standalone purchase to Creative Cloud membership value.
 
-## Experience
+Read them in any order. Each one stands on its own.
 
-Routes:
+## How it works
 
-- `#/` — Home
-- `#/01` — Problem 01, Shared Text Engine
-- `#/02` — Problem 02, Usage-based partner economics
-- `#/03` — Problem 03, Typekit → Adobe Fonts
+- One persistent shell: the home view and the cases share a top bar and footer,
+  with browser back support.
+- Each case ends with a working theory. When a reader reaches it, the site
+  remembers, and the home view reflects it back.
+- Reading one case is a complete visit. There's no required order, progress
+  tracking, or completion state.
+- Returning home keeps your place.
 
-The application remembers theories the visitor has earned by reaching the end of a case and reflects them back on the home page.
+## Case design rules
 
-Reading one case is a complete visit.
-
-There is no required sequence, completion state, or progress system.
-
-## Working theory
-
-The three current earned theories are:
-
-1. **A company-level strategy doesn’t become a team-level priority on its own.**
-2. **A business model only works if the product can measure what it values.**
-3. **Positioning starts before the story. It starts with deciding what job the product plays in the business.**
-
-The home page shows only the theories the visitor has actually earned, in the order they earned them.
+- Evidence comes before interpretation.
+- Ownership is stated once, plainly.
+- Each case shows where my first model was incomplete and what changed.
+- The proof tests the judgment, not just the outcome.
+- Cases end with the theory that changed, and nothing after it.
+- No competency labels, skill summaries, or "what this demonstrates" sections.
 
 ## Documentation
 
-- `docs/WORKING_THEORY_PRD.md` — product and application brief
-- `docs/CASE_DESIGN_PRINCIPLES.md` — cross-case editorial and design rules
-- `docs/EXPERIENCE_ARCHITECTURE.md` — routes, state, persistence, navigation, and integration behavior
+- `docs/WORKING_THEORY_PRD.md`: product brief
+- `docs/CASE_DESIGN_PRINCIPLES.md`: cross-case editorial and design rules
+- `docs/EXPERIENCE_ARCHITECTURE.md`: routes, state, persistence, navigation,
+  and integration
+- `CLAUDE.md`: working instructions and source-of-truth rules for Claude Code
 
-See `CLAUDE.md` for Claude Code working instructions and source-of-truth rules.
+## How this was made
 
-## Build approach
+I used Claude for research and pressure-testing, Claude Design for visual
+exploration, and Claude Code for the build. The judgment stays mine.
 
-Working Theory was developed with:
+---
 
-- Claude for research and pressure-testing
-- Claude Design for visual exploration
-- Claude Code for implementation
-
-The judgment remains Nicole’s.
-
-## Current development phase
-
-Problems 01–03 are editorially and visually approved.
-
-Current work is focused on:
-
-- integrating the final case versions into the stateful application
-- removing stale embedded case copy
-- validating earned-theory behavior
-- validating scroll restoration and navigation
-- responsive QA
-- final production cleanup
-
-Do not treat the current phase as open-ended design exploration.
+A project by [Nicole Miñoza](https://nicoleminoza.com)
