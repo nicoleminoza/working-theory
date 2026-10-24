@@ -1,0 +1,13 @@
+/* Base. Deliberately no scroll-behavior: the app never smooth-scrolls. */
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.62;font-feature-settings:"ss01";-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--terra);color:#fff}
+a{color:var(--plum);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--plum) 30%,transparent);transition:border-color .15s}
+a:hover{border-bottom-color:var(--plum)}
+.num{font-variant-numeric:tabular-nums lining-nums}
+
+/* Hover colors for links that carry inline colors (no border-color change). */
+.hv-plum:hover{color:var(--plum)!important}
+.hv-ink:hover{color:var(--ink)!important}
+.hv-link:hover{color:var(--plum)!important;border-color:var(--plum)!important}

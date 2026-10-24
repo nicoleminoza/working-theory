@@ -1,0 +1,43 @@
+:root{
+--paper:#faf6f1;--paper-2:#f2eadf;--ink:#241f1d;--soft:#5d534c;--faint:#a99d90;--rule:#e6dccf;
+--plum:#6b2c41;--terra:#c07a44;--crimson:#9d2235;
+--on-ink-soft:#cdbfb6;--on-ink-cap:#d9ccc4;
+--brand:var(--plum);--accent:var(--terra);
+/* semantic */
+--surface-page:var(--paper);--surface-alt:var(--paper-2);--surface-card:var(--paper);--surface-emphasis:var(--ink);--surface-cta:var(--brand);
+--surface-on-ink-card:color-mix(in srgb,var(--paper) 6%,transparent);
+--border-on-ink:color-mix(in srgb,var(--paper) 16%,transparent);
+--text-body:var(--ink);--text-muted:var(--soft);--text-tertiary:var(--faint);--text-label:var(--accent);--text-link:var(--brand);--text-danger:var(--crimson);
+--text-on-ink:var(--paper);--text-on-ink-muted:var(--on-ink-soft);
+--border-hairline:var(--rule);--border-heavy:var(--ink);
+--link-underline:color-mix(in srgb,var(--brand) 30%,transparent);
+--highlight:color-mix(in srgb,var(--accent) 38%,transparent);
+--selection-bg:var(--accent);
+}
+
+:root{
+--display:"Newsreader",Georgia,serif;
+--sans:"Hanken Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+--mono:"Spline Sans Mono",ui-monospace,Menlo,monospace;
+--font-display:var(--display);--font-body:var(--sans);--font-mono:var(--mono);
+--fs-hero:clamp(58px,11vw,138px);--fs-section:clamp(30px,4.2vw,50px);--fs-subhead:clamp(20px,2.2vw,29px);
+--fs-statement:clamp(24px,3vw,36px);--fs-stand:clamp(20px,2.5vw,29px);--fs-metric:clamp(40px,5.4vw,68px);
+--fs-body:17px;--fs-lede:18px;--fs-small:14.5px;--fs-caption:13.5px;
+--fs-label:11.5px;--fs-label-sm:10.5px;--fs-index:13px;--fs-nav:13.5px;--fs-pill:12px;--fs-button:15px;
+--lh-body:1.62;--lh-lede:1.55;--lh-display:.92;--lh-section:1.04;--lh-subhead:1.14;
+--tr-display:-.025em;--tr-section:-.02em;--tr-label:.24em;--tr-label-sm:.16em;--tr-index:.1em;
+--fw-regular:400;--fw-medium:500;--fw-semibold:600;--fw-bold:700;
+}
+
+:root{
+--maxw:1180px;--gutter:clamp(20px,5vw,72px);
+--section-pad:clamp(56px,7vw,104px);--band-pad:clamp(46px,5vw,68px);--contact-pad:clamp(64px,8vw,120px);
+--card-pad:clamp(24px,2.6vw,34px);--topbar-pad:14px;
+--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:22px;--space-6:26px;--space-7:36px;--space-8:52px;
+--radius-tag:4px;--radius-portrait:6px;--radius-card:8px;--radius-pill:100px;--radius-glyph:22%;
+--rule-hair:1px solid var(--rule);--rule-heavy:2px solid var(--ink);--accent-bar:2px;
+--shadow-card-hover:0 22px 48px -30px rgba(43,20,30,.4);--shadow-swatch-hover:0 18px 40px -28px rgba(43,20,30,.4);
+--shadow-portrait:0 30px 70px -28px rgba(43,20,30,.45);--shadow-tag:0 8px 24px -14px rgba(0,0,0,.3);--shadow-glyph:0 18px 40px -22px rgba(43,20,30,.5);
+--dur-fast:.15s;--dur-base:.18s;--dur-card:.2s;--dur-slow:.25s;--ease:ease;
+--lift-btn:translateY(-1px);--lift-card:translateY(-3px);
+}

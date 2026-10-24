@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Working Theory QA Checklist</title>
+<style>
+  @page { size: Letter; margin: 0.6in; }
+  * { box-sizing: border-box; }
+  body { font: 11pt/1.45 -apple-system, "Helvetica Neue", Arial, sans-serif; color: #241f1d; margin: 0; }
+  h1 { font: 600 22pt/1.1 Georgia, serif; margin: 0 0 4pt; }
+  h2 { font: 600 13pt/1.2 Georgia, serif; margin: 0 0 6pt; padding-top: 8pt; border-top: 2pt solid #241f1d; }
+  .sub { color: #5d534c; margin: 0 0 12pt; }
+  .meta { display: flex; gap: 18pt; margin: 0 0 14pt; font-size: 10pt; }
+  .meta span { flex: 1; border-bottom: 1px solid #241f1d; padding-bottom: 2pt; }
+  section { margin: 0 0 14pt; break-inside: avoid; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { display: flex; gap: 8pt; padding: 3pt 0; border-bottom: 0.5pt solid #e6dccf; }
+  li::before { content: ""; flex: none; width: 10pt; height: 10pt; margin-top: 3pt; border: 1pt solid #241f1d; }
+  .notes { margin-top: 5pt; font-size: 9pt; color: #5d534c; }
+  .notes div { border-bottom: 1px solid #bbb; height: 16pt; }
+  code { font: 9.5pt Menlo, Consolas, monospace; background: #f2eadf; padding: 0 2pt; }
+  pre { font: 9pt Menlo, Consolas, monospace; background: #f2eadf; padding: 6pt 8pt; margin: 4pt 0 8pt; white-space: pre-wrap; }
+  .setup p { margin: 3pt 0; }
+</style>
+</head>
+<body>
+<h1>Working Theory: QA checklist</h1>
+<p class="sub">Source: docs/EXPERIENCE_ARCHITECTURE.md, QA states. Mark each box when it passes; write what failed in the notes.</p>
+<div class="meta"><span>Tester:</span><span>Date:</span><span>Browser / device:</span></div>
+
+<section class="setup">
+  <h2>Setup</h2>
+  <p>In Terminal: <code>cd /Users/nicoleminoza/code/working-theory</code> then <code>npm run dev</code>. Open <code>http://localhost:5173</code> in a real, visible browser window (a hidden tab will not earn theories).</p>
+  <p>To reset between runs, paste in the DevTools console:</p>
+  <pre>localStorage.clear(); sessionStorage.clear(); location.hash = '#/'; location.reload();</pre>
+  <p>Production build instead: <code>npm run build &amp;&amp; npm run preview</code>.</p>
+</section>
+
+<section>
+  <h2>1. Fresh visitor</h2>
+  <ul>
+    <li>Home shows the hero, three problem rows, Nicole context, and footer.</li>
+    <li>Problem 02 metadata reads <code>Adobe · 2019–2022 →</code>.</li>
+    <li>No "Working theory so far" section, counts, checkmarks, or progress.</li>
+    <li>Footer reads "Working Theory / A project by Nicole Miñoza", with a © 2026 line below a hairline.</li>
+  </ul>
+  <div class="notes"><div></div></div>
+</section>
+
+<section>
+  <h2>2. Partial read</h2>
+  <ul>
+    <li>Open Problem 02, scroll partway, click "← All problems".</li>
+    <li>Back on home, the row is unchanged and no theory has appeared.</li>
+  </ul>
+  <div class="notes"><div></div></div>
+</section>
+
+<section>
+  <h2>3. Single case read</h2>
+  <ul>
+    <li>Open a case and scroll until the grey ending band is in view.</li>
+    <li>Return home: that row has a quiet italic line under the problem sentence.</li>
+    <li>"Working theory so far" shows one theory, the synthesis line, and the "I'd like to hear about it" link.</li>
+    <li>Reload the page: everything above is still there.</li>
+  </ul>
+  <div class="notes"><div></div></div>
+</section>
+
+<section>
+  <h2>4. Earned order (clear state before each run)</h2>
+  <ul>
+    <li>Read 01, then 02, then 03: theories appear in that order.</li>
+    <li>Read 03, then 01, then 02: theories appear 03, 01, 02 (not sorted numerically).</li>
+    <li>Each theory number links back to its case.</li>
+  </ul>
+  <div class="notes"><div></div></div>
+</section>
+
+<section>
+  <h2>5. Navigation and scroll</h2>
+  <ul>
+    <li>Scroll partway down home, open a row: page fades, case opens at the top.</li>
+    <li>Return with the browser Back button: lands at the exact scroll position you left.</li>
+    <li>Return with "← All problems": same exact position, no smooth scrolling.</li>
+    <li>Load <code>#/01</code>, <code>#/02</code>, <code>#/03</code> directly in a new tab: each works.</li>
+    <li>Load <code>#/04</code> or <code>#foo</code>: shows home. Inside a case, changing the hash to either leaves you on that case.</li>
+  </ul>
+  <div class="notes"><div></div></div>
+</section>
+
+<section>
+  <h2>6. Per-case checks</h2>
+  <ul>
+    <li>Problem 01 (text engine): static; dark governance band and proof numbers display correctly.</li>
+    <li>Problem 02: chart stays pinned beside the steps and changes at each of the six steps, ending on "Paid on use".</li>
+    <li>Problem 02: below 760px wide the chart stacks above the steps.</li>
+    <li>Problem 03 (Typekit): pinned reframe strikes through the old question and brings in the new one as you scroll.</li>
+    <li>Problem 03: the consequence line draws across the five columns as you scroll.</li>
+    <li>All three: the theory in the ending band is the last content before the footer, with nothing appended.</li>
+  </ul>
+  <div class="notes"><div></div></div>
+</section>
+
+<section>
+  <h2>7. Mobile (375px wide, DevTools device mode)</h2>
+  <ul>
+    <li>No horizontal scroll or clipped text on home, 01, 02, 03.</li>
+    <li>Home row metadata wraps under the problem sentence.</li>
+    <li>Earned-theory section is legible on home.</li>
+    <li>Header does not cover case content.</li>
+  </ul>
+  <div class="notes"><div></div></div>
+</section>
+
+<section>
+  <h2>8. External links</h2>
+  <ul>
+    <li>Footer "Email" opens a new message to hello@nicoleminoza.com.</li>
+    <li>Footer LinkedIn, GitHub, and nicoleminoza.com open in a new tab at the right place.</li>
+    <li>Make It Land (home context) opens in a new tab at the right place.</li>
+    <li>Résumé → opens in a new tab at the right place.</li>
+    <li>"I'd like to hear about it" (after earning) opens an email to hello@nicoleminoza.com.</li>
+  </ul>
+  <div class="notes"><div></div></div>
+</section>
+
+<section>
+  <h2>Visual comparison (not automated)</h2>
+  <ul>
+    <li>Ending bands, typography, and spacing match the design-reference files when viewed side by side.</li>
+  </ul>
+  <div class="notes"><div></div><div></div></div>
+</section>
+</body>
+</html>

@@ -1,0 +1,7 @@
+/* Self-hosted variable fonts. */
+@font-face{font-family:"Newsreader";src:url("../assets/fonts/newsreader-var.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Newsreader";src:url("../assets/fonts/newsreader-italic-var.woff2") format("woff2");font-weight:200 800;font-style:italic;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url("../assets/fonts/hanken-grotesk-var.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url("../assets/fonts/hanken-grotesk-italic-var.woff2") format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Spline Sans Mono";src:url("../assets/fonts/spline-sans-mono-var.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Spline Sans Mono";src:url("../assets/fonts/spline-sans-mono-italic-var.woff2") format("woff2");font-weight:300 700;font-style:italic;font-display:swap}
